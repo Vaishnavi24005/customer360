@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: ga4
+    database: bigquery-public-data
+    schema: ga4_obfuscated_sample_ecommerce
+    tables:
+      - name: events
+        identifier: 'events_*'
+  - name: inputs
+    database: "{{ env_var('C360_PROJECT') }}"
+    schema: "{{ env_var('C360_INPUTS', 'customer360_inputs') }}"
+    tables:
+      - name: crm
+      - name: identify
+      - name: app_events
+      - name: spend
