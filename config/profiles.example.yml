@@ -1,0 +1,11 @@
+customer360:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('C360_PROJECT') }}"
+      dataset: "{{ env_var('C360_DATASET', 'customer360') }}"
+      location: US
+      threads: 4
+      maximum_bytes_billed: 20000000000
