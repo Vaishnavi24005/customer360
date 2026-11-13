@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+logs/
+target/
+profiles.yml
+.env
+*.sqlite
+*.pyc
+.user.yml
+warehouse-demo/
