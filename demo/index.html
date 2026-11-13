@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer 360 · Marketing Attribution</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="data.js"></script><script defer src="dashboard.js"></script>
+</head>
+<body>
+<header><div class="shell"><p class="eyebrow">CUSTOMER 360</p><h1>Marketing attribution</h1><p id="provenance"></p></div></header>
+<main class="shell">
+<section aria-label="Overview" class="kpis">
+<div><span>Sessions</span><strong id="sessions"></strong></div>
+<div><span>Orders</span><strong id="orders"></strong></div>
+<div><span>Customer profiles</span><strong id="customer_profile"></strong></div>
+<div><span>Attributed revenue</span><strong id="revenue"></strong></div>
+</section>
+<section class="panel">
+<div class="heading"><h2>Campaign performance</h2><label>Attribution model <select id="model"></select></label></div>
+<p class="context">USD · 30-day lookback · CPA uses credited first observed customers</p>
+<div class="table-wrap"><table><thead><tr><th>Campaign</th><th>Revenue</th><th>Spend</th><th>ROAS</th><th>ROI</th><th>CPA</th></tr></thead><tbody id="campaigns"></tbody></table></div>
+</section>
+<div class="columns">
+<section class="panel"><h2>Revenue by channel</h2><p class="context">Compare credit across attribution models.</p><div id="channels"></div></section>
+<section class="panel"><h2>Customer segments</h2><p class="context">RFM segments and annualized gross-profit LTV proxy.</p><div class="table-wrap"><table><thead><tr><th>Segment</th><th>Profiles</th><th>Avg. LTV</th></tr></thead><tbody id="segments"></tbody></table></div></section>
+</div>
+<footer>ROI assumes a 55% gross margin. Spend and customer links are simulated. Attribution measures assigned credit.</footer>
+</main>
+</body>
+</html>
